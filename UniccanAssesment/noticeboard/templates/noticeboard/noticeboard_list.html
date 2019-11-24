@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 320px;
+  padding: 50px;
+  border: 5px solid gray;
+  margin: 100px;
+  border: 1px solid black;
+  outline-style: outset;
+  outline-color: green;
+}
+</style>
+</head>
+<body>
+    <center> 
+<div> 
+<h1>Notices</h1>
+<ul>
+{% for notice in object_list %}
+	<li>{{notice.title}}
+		<a href="/noticeboard-detailview/{{notice.id}}">Detail</a>
+		<a href="/noticeboard-deleteview/{{notice.id}}">Delete</a>
+		<a href="/noticeboard-updateview/{{notice.id}}">Update</a>
+	</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+<a href="/noticeboard-createview/">Create</a>   
+</div>
+</center>
+</body>
+</html>

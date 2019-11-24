@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 320px;
+  padding: 50px;
+  border: 5px solid gray;
+  margin: 100px;
+  border: 1px solid black;
+  outline-style: outset;
+  outline-color: green;
+}
+</style>
+</head>
+<body>
+    <center> 
+<div> 
+<h1>Notices</h1>
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+</form>
+
+</div>
+</center>
+</body>
+</html>

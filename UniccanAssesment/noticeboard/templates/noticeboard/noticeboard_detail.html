@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 320px;
+  padding: 50px;
+  border: 5px solid gray;
+  margin: 100px;
+  border: 1px solid black;
+  outline-style: outset;
+  outline-color: green;
+}
+</style>
+</head>
+<body>
+    <center> 
+<div>   
+    <h1>{{ object.title }}</h1>
+    <p>Issued on : {{ object.timestamp|date }}</p>
+    <p>{{ object.text }}</p>
+<a href="/noticeboard-listview">Go back</a>     
+</div>
+</center>
+</body>
+</html>
